@@ -61,3 +61,9 @@ end
 namespace :deploy do
     after :finished, :cleanup
 end
+
+#Information for deploy source to S3
+
+set :access_key_id, ENV['AWS_ACCESS_KEY_ID']
+set :secret_access_key, ENV['AWS_ACCESS_KEY_SECRET']
+set :region, ENV['AWS_REGION']
